@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Linked mirror list</title>
+		<style>
+			div {
+				overflow: hidden;
+			}
+			#simpleSortable1, #simpleSortable2, #sortable1, #sortable2 {
+				border: 1px solid #eee;
+				width: 142px;
+				min-height: 20px;
+				list-style-type: none;
+				margin: 0;
+				padding: 5px 0 0 0;
+				float: left;
+				margin-right: 10px;
+			}
+
+			#simpleSortable1 li, #simpleSortable2 li, #sortable1 li, #sortable2 li {
+				margin: 0 5px 5px 5px;
+				padding: 5px;
+				font-size: 1.2em;
+				width: 120px;
+			}
+
+			#simpleSortable1 .sortable-placeholder, #sortable1 .sortable-placeholder {
+				width: 90%;
+				height: 30px;
+				background: black;
+			}
+
+			ul.lista {
+				width: 100% !important;
+				min-height: 20px !important;
+				list-style: none !important;
+				padding-left: 5px !important;
+				overflow: hidden !important;
+			}
+
+			ul.lista li {
+				width: 80% !important;
+				font-size: 0.9em !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>Simple mirror-sortable-list</p>
+			<ul id="simpleSortable1" class="connectedSortable">
+				<li class="ui-state-default" id="1">Item 1</li>
+				<li class="ui-state-default" id="2">Item 2</li>
+				<li class="ui-state-default" id="3">Item 3</li>
+				<li class="ui-state-default" id="4">Item 4</li>
+				<li class="ui-state-default" id="5">Item 5</li>
+			</ul>
+
+			<ul id="simpleSortable2">
+				<li class="ui-state-default" id="1">Item 1</li>
+				<li class="ui-state-default" id="2">Item 2</li>
+				<li class="ui-state-default" id="3">Item 3</li>
+				<li class="ui-state-default" id="4">Item 4</li>
+				<li class="ui-state-default" id="5">Item 5</li>
+			</ul>
+		</div>
+		
+		<div>
+			<p>Mirror-sortable-list with childrens</p>
+			<ul id="sortable1" class="connectedSortable withChildren">
+				<li class="ui-state-default" id="1">Item 1
+					<ul id="sortable3" class="connectedSortable lista withChildren">
+
+					</ul>
+				</li>
+				<li class="ui-state-default" id="2">Item 2
+					<ul id="sortable4" class="connectedSortable lista withChildren">
+
+					</ul>
+				</li>
+				<li class="ui-state-default" id="3">Item 3
+					<ul id="sortable5" class="connectedSortable lista withChildren">
+
+					</ul>
+				</li>
+				<li class="ui-state-default" id="4">Item 4
+					<ul id="sortable6" class="connectedSortable lista withChildren">
+
+					</ul>
+				</li>
+				<li class="ui-state-default" id="5">Item 5
+					<ul id="sortable7" class="connectedSortable lista withChildren">
+
+					</ul>
+				</li>
+			</ul>
+
+			<ul id="sortable2">
+				<li class="ui-state-default" id="1">Item 1
+					<ul id="" class="lista">
+
+					</ul>
+				</li>
+				<li class="ui-state-default" id="2">Item 2
+					<ul id="" class="lista">
+
+					</ul>
+				</li>
+				<li class="ui-state-default" id="3">Item 3
+					<ul id="" class="lista">
+
+					</ul>
+				</li>
+				<li class="ui-state-default" id="4">Item 4
+					<ul id="" class="lista">
+
+					</ul>
+				</li>
+				<li class="ui-state-default" id="5">Item 5
+					<ul id="" class="lista">
+
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<script src="js/jquery.3.3.1.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
